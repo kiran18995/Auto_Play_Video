@@ -172,7 +172,7 @@ class VideoPlayerRecyclerView @JvmOverloads constructor(
             playPosition = -1
             return
         }
-        thumbnailUrl = holder.thumbnailUrlnail
+        thumbnailUrl = holder.thumbnailUrl
         progressBar = holder.progressBar
         viewHolderParent = holder.itemView
         requestManager = holder.requestManager

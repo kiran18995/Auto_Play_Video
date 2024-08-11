@@ -10,13 +10,13 @@ import com.kiran.autoplayvideo.models.Video
 
 
 class VideoPlayerViewHolder(private var parent: View) : RecyclerView.ViewHolder(parent) {
-    var thumbnailUrlnail: ImageView = itemView.findViewById(R.id.thumbnailUrlnail)
+    var thumbnailUrl: ImageView = itemView.findViewById(R.id.thumbnailUrlnail)
     var progressBar: ProgressBar = itemView.findViewById(R.id.progressBar)
     var requestManager: RequestManager? = null
 
     fun onBind(mediaObject: Video, requestManager: RequestManager?) {
         this.requestManager = requestManager
         parent.tag = this
-        this.requestManager?.load(mediaObject.thumbnailUrl)?.centerCrop()?.into(thumbnailUrlnail)
+        this.requestManager?.load(mediaObject.thumbnailUrl)?.centerCrop()?.into(thumbnailUrl)
     }
 }
